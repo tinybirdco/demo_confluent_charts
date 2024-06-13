@@ -1,0 +1,20 @@
+TOKEN "dashboard_token" READ
+
+NODE filter_data
+SQL >
+
+    SELECT timestamp, sales
+    FROM ecomm_events
+    WHERE timestamp >= now() - interval 7 day
+
+
+
+NODE endpoint
+SQL >
+
+    SELECT toDate(timestamp) AS ts, sum(sales) AS total_sales
+    FROM filter_data
+    GROUP BY ts
+    ORDER BY ts
+
+

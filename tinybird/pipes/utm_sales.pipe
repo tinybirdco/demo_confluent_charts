@@ -1,0 +1,12 @@
+TOKEN "dashboard_token" READ
+
+NODE endpoint
+SQL >
+
+    SELECT utm_source, sum(sales) AS total_sales
+    FROM ecomm_events
+    WHERE timestamp >= now() - INTERVAL 7 DAY
+    GROUP BY utm_source
+    ORDER BY total_sales DESC
+
+

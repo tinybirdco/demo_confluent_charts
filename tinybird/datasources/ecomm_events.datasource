@@ -1,0 +1,23 @@
+
+SCHEMA >
+    `browser` String `json:$.browser`,
+    `product_id` Int32 `json:$.product_id`,
+    `promo` Int16 `json:$.promo`,
+    `sales` Int16 `json:$.sales`,
+    `store_id` Int16 `json:$.store_id`,
+    `timestamp` DateTime64(3) `json:$.timestamp`,
+    `utm_source` String `json:$.utm_source`
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYYYYMM(__timestamp)"
+ENGINE_SORTING_KEY "timestamp"
+
+KAFKA_CONNECTION_NAME 'tb_confluent'
+KAFKA_TOPIC 'demo_ecomm_events'
+KAFKA_GROUP_ID 'demo_ecomm_events_1718202402748'
+KAFKA_AUTO_OFFSET_RESET 'earliest'
+KAFKA_STORE_RAW_VALUE 'False'
+KAFKA_STORE_HEADERS 'False'
+KAFKA_STORE_BINARY_HEADERS 'True'
+KAFKA_TARGET_PARTITIONS 'auto'
+KAFKA_KEY_AVRO_DESERIALIZATION ''
