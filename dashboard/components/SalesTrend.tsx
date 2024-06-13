@@ -6,7 +6,7 @@ export function SalesTrend() {
   return (
     <AreaChart
       endpoint="https://api.us-east.tinybird.co/v0/pipes/sales_trend.json"
-      token="p.eyJ1IjogIjNjOTgxYjhjLTYwN2ItNGRhYS1hZTkyLTA0NzY3NDM2ZjEzZCIsICJpZCI6ICJjOGEwMTBkYS1kMDk3LTQwY2QtOTRmYS0yZjIyNDcxYjZlODQiLCAiaG9zdCI6ICJ1c19lYXN0In0.fDTzpFst5gnuY5BKhjKkZbXdjVqOLqyf1bnFZZYQyQQ"
+      token="your_token"
       index="ts"
       categories={['total_sales']}
       colorPalette={['#27F795', '#008060']}
