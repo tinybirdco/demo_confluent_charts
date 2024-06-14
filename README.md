@@ -6,9 +6,9 @@ If you're building a SaaS product, you need insights, and a way to share them. T
 
 Read more about [user-facing analytics dashboards here](https://www.tinybird.co/docs/use-cases/user-facing-dashboards).
 
-## Watch the workshop
+## Watch the Screencast
 
-Want to watch somebody build this demo live? [Watch the workshop](https://www.youtube.com/watch?v=ia_BN9AU-do).
+Want to watch somebody build this demo live? [Watch the Screencast](https://www.youtube.com/watch?v=ia_BN9AU-do).
 
 ## Deploy it yourself
 

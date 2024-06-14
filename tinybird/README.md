@@ -10,7 +10,7 @@ This project contains:
 ├── datasources
 │   └── ecomm_events.datasource
 ├── pipes
-│   └── sales_trend.pipe
+│   ├── sales_trend.pipe
 │   └── utm_sales.pipe
 ```
 
